@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.Views.PageAgregarContact">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20,20,20,20" BackgroundColor="Bisque">
+
+            <Label Text="Codigo"/>
+            <Entry Keyboard="Numeric"
+             Placeholder="Codigo"
+                   x:Name="id"/>
+
+            <Label Text="Nombres"/>
+            <Entry Keyboard="Text"
+             Placeholder="Nombres"
+                   x:Name="nombre"/>
+
+            <Label Text="Apellidos"/>
+            <Entry Keyboard="Text"
+             Placeholder="Apellidos"
+                  x:Name="apellido"/>
+
+            <Label Text="Edad"/>
+            <Entry Keyboard="Numeric"
+             Placeholder="Edad"
+                   x:Name="edad"/>
+
+
+            <Picker Title="Pais" x:Name="pais"
+              TitleColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Honduras (504)</x:String>
+                        <x:String>Costa Rica(506)</x:String>
+                        <x:String>Guatemala(502)</x:String>
+                        <x:String>El salvador(503)</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Nota"/>
+            <Entry Keyboard="Text"
+             Placeholder="Nota"
+                   x:Name="nota"/>
+
+            <Label Text="Latitud"/>
+            <Entry Keyboard="Numeric"
+             Placeholder="Latitud"
+                   x:Name="latitud"/>
+
+            <Label Text="Longitud"/>
+            <Entry Keyboard="Numeric"
+             Placeholder="Longitud"
+                   x:Name="longitud"/>
+            
+            <Button Text="Agregar Contacto"
+        Font="Large"
+        BorderWidth="1"
+                    x:Name="btnagregar"
+        Clicked="btnagregar_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
