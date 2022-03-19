@@ -11,10 +11,8 @@ namespace AppExamen.Controllers
 {
     public  static class DataBase
     {
-        // Procedimientos
-
         // Retorna todas las filas de la tabla conctatos
-        public static Task<List<Contactos>>ListaContactos()
+        public static Task<List<Contactos>> Oblistacontactos()
         {
             return DB.dbconexion.Table<Contactos>().ToListAsync();
         }

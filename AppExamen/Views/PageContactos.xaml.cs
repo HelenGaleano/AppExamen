@@ -36,7 +36,7 @@ namespace AppExamen.Views
         {
             base.OnAppearing();
 
-            listacontactos.ItemsSource = await DataBase.ObtenerListacontatos();
+            listacontactos.ItemsSource = await DataBase.Listacontatos();
         }
 
         private void ToolDeleContacto_Clicked_1(object sender, EventArgs e)
