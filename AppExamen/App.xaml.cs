@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using AppExamen.Controllers;
 using System.IO;
 using AppExamen.Views;
+
 namespace AppExamen
 {
     public partial class App : Application
@@ -11,8 +12,10 @@ namespace AppExamen
         public App()
         {
             InitializeComponent();
+
             DB.conexion(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DBPR.db3"));
-            MainPage = new MainPage();
+            
+            MainPage = new NavigationPage(new PagePrincipal());
         }
 
         protected override void OnStart()

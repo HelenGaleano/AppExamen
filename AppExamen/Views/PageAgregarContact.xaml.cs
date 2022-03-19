@@ -8,9 +8,9 @@ using Xamarin.Essentials;
 using AppExamen.Controllers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Plugin.Media;
-using System.IO;
+
 using System.Threading;
+
 
 namespace AppExamen.Views
 {
@@ -58,11 +58,12 @@ namespace AppExamen.Views
             }
         }
 
-        private void btnagregar_Clicked(object sender, EventArgs e)
+        private async void btnagregar_Clicked(object sender, EventArgs e)
         {
             var Contactos = new Contactos()
             {
-                nombres = nombre.Text,
+                
+                nombre = nombre.Text,
                 apellidos=apellido.Text,
                 edad= Convert.ToInt16(edad.Text),
                 pais=pais.SelectedItem.ToString(),
@@ -71,7 +72,25 @@ namespace AppExamen.Views
                 longitud=Convert.ToDouble(longitud.Text),
             };
 
-            DataBase.AddContacto(Contactos);
+            if (await DataBase.AddContacto(Contactos)>0)
+            {
+
+                await DisplayAlert("Alerta", "Debe escribir una nota","Ok");
+
+            }else
+            {
+
+                await DisplayAlert("Alerta", "Debe escribir un Telefono", "Ok");
+
+                await DisplayAlert("Alerta", "Debe escribir un nombre", "Ok");
+            }
+
+            //DataBase.AddContacto(Contactos);
+
+        }
+
+        private void btnagregar2_Clicked(object sender, EventArgs e)
+        {
 
         }
     }

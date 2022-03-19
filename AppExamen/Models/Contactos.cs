@@ -5,17 +5,20 @@ using SQLite;
 
 namespace AppExamen.Models
 {
-    internal class Contactos
+    public class Contactos
     {
+       
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
-        [MaxLength(70)]
-        public String nombres { get; set; }
+        [MaxLength(100)]
+        public String nombre{ get; set; }
 
         [MaxLength(70)]
         public String apellidos { get; set; }
-        [MaxLength(50)]
+
+        public string telefono { get; set; }
+
         public int edad { get; set; }
 
         [MaxLength(70)]

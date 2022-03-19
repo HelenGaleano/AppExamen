@@ -12,7 +12,7 @@ namespace AppExamen.Controllers
     public  static class DataBase
     {
         // Retorna todas las filas de la tabla conctatos
-        public static Task<List<Contactos>> Oblistacontactos()
+        public static Task<List<Contactos>> Obtenerlistacontactos()
         {
             return DB.dbconexion.Table<Contactos>().ToListAsync();
         }
@@ -32,7 +32,7 @@ namespace AppExamen.Controllers
         }
 
         // Obtenemos por el ID un registro de un contacto de persona
-        public static Task<Contactos> listaContacto(int pid)
+         public static Task<Contactos> ObtenerContacto(int pid)
         {
             return DB.dbconexion.Table<Contactos>()
                 .Where(i => i.ID == pid)
@@ -40,7 +40,7 @@ namespace AppExamen.Controllers
         }
 
         // Eliminamos el registro de un contacto de persona
-        public static Task<int> DelContacto(Contactos contacto)
+        public  static Task<int> DelContacto(Contactos contacto)
         {
             return DB.dbconexion.DeleteAsync(contacto);
         }

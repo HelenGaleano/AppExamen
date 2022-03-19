@@ -3,14 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppExamen.Views.PageContactos">
 
+    <ContentPage.ToolbarItems>
+        
+        
+        <ToolbarItem Text="Insertar Contacto"
+                     x:Name="ToolDeleInsertar"
+                     Clicked="ToolDeleInsertar_Clicked"/>
+
+        <ToolbarItem Text="Eliminar Contato"
+                     x:Name="TooDeleEiminar"
+                     Clicked="TooDeleEiminar_Clicked"/>
+
+        <ToolbarItem Text="Add Sitio"
+                     x:Name="toolsitios"
+                     IconImageSource="sitio.png"
+                     Clicked="toolsitios_Clicked"/>
+
+        <ToolbarItem Text="Actualizar Contacto"
+                      IconImageSource="actu.png"
+                     x:Name="TooDeleActualizar"
+                     Clicked="TooDeleActualizar_Clicked"/>
+        
+    </ContentPage.ToolbarItems>
+    
     
     <ContentPage.Content>
-        <StackLayout>
-            <CollectionView x:Name="listacontactos"
-                            Margin="20"
-                            SelectionMode="Single"
-                            SelectionChanged="listacontactos_SelectionChanged_1">
 
+        <StackLayout Margin="10,0,10,0"  BackgroundColor="GhostWhite">
+
+            <CollectionView x:Name="SeleccionarContactos"
+                           
+                            SelectionMode="Single"
+                            SelectionChanged="SeleccionarContactos_SelectionChanged">
+
+                
+                
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical"
                                       ItemSpacing="10" />

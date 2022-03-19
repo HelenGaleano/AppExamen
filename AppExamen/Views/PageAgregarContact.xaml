@@ -4,31 +4,61 @@
              x:Class="AppExamen.Views.PageAgregarContact">
     <ContentPage.Content>
 
-        <StackLayout Margin="20,20,20,20" BackgroundColor="Bisque">
+        <StackLayout Margin="20,20,20,20" BackgroundColor="OldLace">
 
-            <Label Text="Codigo"/>
-            <Entry Keyboard="Numeric"
-             Placeholder="Codigo"
-                   x:Name="id"/>
-
-            <Label Text="Nombres"/>
+            <Label Text="Nuevo Contacto"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="Black"
+                   Margin="0,0,0,20"/>
+           
+            <Label Text="Nombre"
+                   FontSize="11"
+                   HorizontalOptions="Start"
+                  TextColor="Black"
+                   Margin="0,0,0,0"
+                   />
             <Entry Keyboard="Text"
-             Placeholder="Nombres"
+                   FontSize="11"
+                   Placeholder="Nombre"
                    x:Name="nombre"/>
 
-            <Label Text="Apellidos"/>
+            <Label Text="Apellido"
+                   FontSize="11"
+                   HorizontalOptions="Start"
+                  TextColor="Black"
+                   Margin="0,0,0,0"/>
             <Entry Keyboard="Text"
              Placeholder="Apellidos"
+                   FontSize="11"
                   x:Name="apellido"/>
 
-            <Label Text="Edad"/>
+            <Label Text="Telefono"
+                   FontSize="11"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                   Margin="0,0,0,0"/>
+            
+            <Entry Keyboard="Text"
+                   Placeholder="Telefono"
+                   FontSize="11"
+                   x:Name="telefono"/>
+
+            <Label Text="Edad"
+                   FontSize="11"
+                   HorizontalOptions="Start"
+                  TextColor="Black"
+                   Margin="0,0,0,0"/>
             <Entry Keyboard="Numeric"
              Placeholder="Edad"
+                   FontSize="11"
                    x:Name="edad"/>
 
 
             <Picker Title="Pais" x:Name="pais"
-              TitleColor="Black">
+                    TitleColor="Black"
+                   TextColor="Black"
+                   Margin="0,0,0,0">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Honduras (504)</x:String>
@@ -39,26 +69,45 @@
                 </Picker.ItemsSource>
             </Picker>
 
-            <Label Text="Nota"/>
+            <Label Text="Nota"
+                   FontSize="11"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                   Margin="0,0,0,0"/>
+            
             <Entry Keyboard="Text"
              Placeholder="Nota"
+                   FontSize="11"
+                   BackgroundColor="Green"
                    x:Name="nota"/>
 
-            <Label Text="Latitud"/>
+            <Label Text="Latitud"
+                  
+                   TextColor="Black"/>
             <Entry Keyboard="Numeric"
              Placeholder="Latitud"
                    x:Name="latitud"/>
 
-            <Label Text="Longitud"/>
+            <Label Text="Longitud"
+                   
+                   TextColor="Black"/>
             <Entry Keyboard="Numeric"
-             Placeholder="Longitud"
-                   x:Name="longitud"/>
+                    Placeholder="Longitud"
+                    x:Name="longitud"/>
+            
+            
+            <Button 
+                    x:Name="btnagregar2" 
+                    Text="Agregar sitio" 
+                    Font="large"
+                    BorderWidth="1"
+                    Clicked="btnagregar2_Clicked" />
             
             <Button Text="Agregar Contacto"
-        Font="Large"
-        BorderWidth="1"
+                    Font="Large"
+                    BorderWidth="1"
                     x:Name="btnagregar"
-        Clicked="btnagregar_Clicked"/>
+                    Clicked="btnagregar_Clicked"/>
 
 
         </StackLayout>

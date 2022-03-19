@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using SQLite;
 using AppExamen.Models;
-using AppExamen.Controllers;
 
-using System.Threading.Tasks;
 
 namespace AppExamen.Controllers
 {
@@ -21,7 +19,8 @@ namespace AppExamen.Controllers
 
             // Procedemos a crear las tablas de la base de datos
             dbconexion.CreateTableAsync<Contactos>();
- 
+            
+
         }
 
         

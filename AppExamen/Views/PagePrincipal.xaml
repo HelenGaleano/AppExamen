@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.Views.PagePrincipal"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Insertat Contacto"
+                     x:Name="TooContacto"
+                     Clicked="TooContacto_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    
+    <ContentPage.Content>
+        <StackLayout Margin="10,0,10,0"  BackgroundColor="GhostWhite">
+            <Image Source="logoUCENM.png"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center"
+                   Margin="70,30,50,5"/>
+
+            
+            <Label Text="Nombre"
+                   HorizontalOptions="Start"
+                   FontSize="20"
+                   TextColor="Black"
+                   Margin="10,5,10,5"/>
+            <Entry Keyboard="Text"
+                    Placeholder="nombre"
+                    Margin="10,5,10,5"
+                   BackgroundColor="Beige"
+                   
+                   WidthRequest="0" HeightRequest="50"
+                   
+                   IsSpellCheckEnabled="True"
+                   IsTextPredictionEnabled="True"
+                   MaxLength="10"
+                   x:Name="nombre"
+                   />
+            <Label Text="Telefono"
+                    FontSize="20"
+                   TextColor="Black"
+                   Margin="10,5,10,5"/>
+            <Entry Keyboard="Text"
+                    Margin="10,5,10,5"
+                    BackgroundColor="Beige"
+                   Placeholder="Telefono"
+                   x:Name="telefono"/>
+
+            <Label Text="Edad"
+                    FontSize="20"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                   Margin="10,5,10,5"/>
+            <Entry Keyboard="Numeric"
+             Placeholder="Edad"
+                    Margin="10,5,10,5"
+                    BackgroundColor="Beige"
+                   x:Name="edad"/>
+
+            <Picker Title="Pais" x:Name="pais"
+              TitleColor="Black"
+                     BackgroundColor="Beige"
+                     FontSize="20"
+                    Margin="10,5,10,5">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Honduras (504)</x:String>
+                        <x:String>Costa Rica(506)</x:String>
+                        <x:String>Guatemala(502)</x:String>
+                        <x:String>El salvador(503)</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Nota"
+                    FontSize="20"
+                   TextColor="Black"
+                   Margin="10,5,10,5"/>
+            <Entry Keyboard="Text"
+             Placeholder="Conocido desde la secundaria"
+                    Margin="10,5,10,5"
+                   BackgroundColor="LightGreen"
+                   x:Name="nota"/>
+
+            
+            <Button Text="Salvar Contacto"
+                    TextColor="FloralWhite"
+                    BackgroundColor="Green"
+                    BorderColor="Black"
+                    BorderWidth="3"
+                    Margin="0,0,0,0"
+                    CornerRadius="1"
+                    WidthRequest="0"
+                    HeightRequest="60"
+                    x:Name="btSalvar"
+                    Clicked="btSalvar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
